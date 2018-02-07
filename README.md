@@ -22,3 +22,31 @@ pip-compile --output-file requirements/requirements-dev.txt requirements/require
 
 pip install -r requirements/requirements-dev.txt
 ```
+
+4. Install docker-machine & create a main container
+
+```
+$ brew install docker-machine
+$ docker-machine create main
+```
+
+## Deployments
+
+1. Make sure docker is started and env variables are set:
+
+```
+$ docker-machine start main
+$ eval $(docker-machine env main)
+```
+
+2. Update the `requirements.txt` file:
+
+```
+$ pip-compile --output-file requirements.txt requirements/requirements.in
+```
+
+3. Deploy
+
+```
+$ serverless deploy --stage staging
+```

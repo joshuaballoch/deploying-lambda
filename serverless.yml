@@ -1,5 +1,12 @@
 service: hello-world
 
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
 package:
   exclude:
     - .venv/**

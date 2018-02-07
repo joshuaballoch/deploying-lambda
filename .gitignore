@@ -1,6 +1,7 @@
 # Distribution / packaging
 .Python
 .venv/
+node_modules/
 *requirements*.txt
 env/
 build/
