@@ -2,6 +2,7 @@
 .Python
 .venv/
 node_modules/
+.requirements.zip
 *requirements*.txt
 env/
 build/

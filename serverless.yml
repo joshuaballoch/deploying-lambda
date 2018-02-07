@@ -5,6 +5,7 @@ plugins:
 
 custom:
   pythonRequirements:
+    zip: true
     dockerizePip: non-linux
 
 package:
