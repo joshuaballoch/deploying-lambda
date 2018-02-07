@@ -1,0 +1,17 @@
+service: hello-world
+
+package:
+  exclude:
+    - .venv/**
+    - node_modules/**
+    - .git/**
+    - __pycache__/**
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: ${opt:stage, 'dev'}
+
+functions:
+  hello_world:
+    handler: handler.call
